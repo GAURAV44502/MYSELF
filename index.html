@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="discription" content="responsive website with flexbox"/>
+	<meta name="keywords" content="flexbox,grid"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta http-equiv="refresh" content="1000"/>
+<meta name="author" content="gaurav sharma"/>
+	<title> website layout flexbox</title>
+	<link rel="stylesheet" type="text/css" href="all.css">
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		body
+		{
+			font-family:cursive;
+			display: flex;
+			flex-direction: column;
+			margin:0px;
+		}
+header
+{
+background-color:#ff006c;
+display: flex;
+align-items: center;
+padding: 15px 0px;
+font-weight: bold;
+}
+
+header ul
+{
+	list-style: none;
+	display: flex;
+	padding: 0px;
+	margin:0px;
+}
+#logo
+{
+	margin:0px auto;
+	font-size: 20px;
+	text-shadow: 0 2px 2px blue,-2px 5px 1px lime;
+}
+a
+{
+	text-decoration: none;
+}
+ #menu li
+ {
+ 	padding: 10px;
+ }
+#icons li
+{
+	padding: 10px;
+}
+header a
+{
+	color: white;
+	
+}
+#container
+{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#main
+{
+	display: flex;
+}
+aside
+{
+	flex:0 0 20vw;
+	background-color:beige; 
+	padding: 10px;
+}
+aside ul
+{
+	list-style: none;
+	padding:0px;
+}
+aside ul a
+{
+	color:#ff006c;
+	display: block;
+	padding: 10px;
+	font-size: 20px;
+	border-bottom:2px solid gray;
+	border-radius: 30px;
+}
+aside ul li
+{
+	width:75%;
+}
+aside img
+{
+	width: 100%;
+	margin-top: 50px;
+}
+aside li:hover
+{  
+	
+	border-radius: 50px;
+	background-color:#ff006c;
+	margin-top: 10px;
+	text-align: center;
+transition-property:width,background-color,border-radius;
+transition-duration: 1s,1s,1s;
+transition-delay: 0s;
+transition-timing-function:linear;
+width:100%;
+}
+aside li a:hover
+{
+	color: white;
+}
+#service-box
+{
+	border:25px solid #eee;
+	border-image-source: url(image4.jpg);
+border-image-slice: 75;
+border-image-repeat:round;
+border-image-width: 25px;
+	padding: 10px;
+	flex-basis: 32%;
+	max-width: 400px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 25px;
+}
+#service-box img
+{
+	width: 100%;
+}
+#service-box h3
+{
+	margin:5px 0px 10px 0px;
+}
+#service-box p
+{
+margin:0px 0px 10px ;
+
+}
+footer
+{
+	background-color:#ff006c; 
+	color: white;
+	text-align: center;
+	padding: 15px
+}
+article
+{
+	padding: 10px;
+}
+.more-info
+{
+	align-self: flex-start;
+	margin-top: auto;
+}
+.more-info a
+{
+	background-color:#ff006c;
+	color: white;
+	padding: 7px 12px;
+display: block;
+}
+.more-info a:hover
+{
+	background-color:transparent;
+	color: gray;
+	border:1px solid gray;
+}
+@media screen and (max-width:950px)
+{
+	#service-box
+	{
+		flex-basis: 48%;
+		
+	}
+aside
+{
+	flex:0 0 30vw;
+}
+}
+@media screen and (max-width:650px)
+{
+header
+{
+flex-direction: column;
+}
+#logo
+{	
+font-size: 15px;
+}
+article
+{
+	order:-1;
+}
+#main
+{
+	flex-direction: column;
+}
+#container
+{
+	flex-direction: column;
+	align-items: center;
+}
+aside
+{
+	width: 70%;
+	align-self: center;
+}
+}
+@media screen and (max-width:400px)
+{
+aside
+{
+width: 100%;
+}
+}
+
+	</style>
+
+
+</head>
+<body>
+<header>
+	<nav id="menu">
+		<ul>
+			<li><a href="">school building</a></li>
+			
+		</ul>
+	</nav>
+	<div id="logo">
+		<a href="">GYAN BHARTI PUBLIC SCHOOL HATHO</a>
+	</div>
+	<nav id="icons">
+		<ul>
+		<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+			<li><a href=""><i class="fab fa-twitter"></i></a></li>
+			<li><a href="">T</a></li>
+		</ul>
+	</nav>
+</header>
+<div id="main">
+	<aside>
+		<ul>
+			
+<li><a href="">Home</a></li>
+<li><a href="">About Us</a></li>
+<li><a href="">Contact</a></li>
+<li><a href="">E-mail Us</a></li>
+<li><a href="">Registration Form</a></li>
+<li><a href="">School Location</a></li>
+<li><a href="">Facilities</a></li>
+
+		</ul>
+		
+	</aside>
+	<article>
+		<h3>welcome to our website</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<h3>Our services</h3>
+<div id="container">
+	<div id="service-box">
+<div class="image">
+	<img src="space2.jpg">
+</div>
+<div id="title">
+	<h3>web designing</h3>
+</div>
+<div id="info">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+<div class="more-info">
+	<a href="">Read more</a>
+</div>
+</div>
+<div id="service-box">
+<div class="image">
+	<img src="space2.jpg">
+</div>
+<div id="title">
+	<h3>web development</h3>
+</div>
+<div id="info">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+<div class="more-info">
+	<a href="">Read more</a>
+</div>
+</div>
+<div id="service-box">
+<div class="image">
+	<img src="space2.jpg">
+</div>
+<div id="title">
+	<h3>ios development</h3>
+</div>
+<div id="info">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+<div class="more-info">
+	<a href="">Read more</a>
+</div>
+</div>
+</div>
+	</article>
+</div>
+<footer>
+	sharmag44502@gmail.com
+</footer>
+</body>
+</html>
